@@ -3,6 +3,7 @@ import BatteryReplacement from "@/components/ServiceTils/BatteryReplacement";
 import ChipsetReplacement from "@/components/ServiceTils/ChipsetReplacement";
 import DataRecovery from "@/components/ServiceTils/DataRecovery";
 import HardDiskReplacement from "@/components/ServiceTils/HardDiskReplacement";
+import LastThreeTils from "@/components/ServiceTils/LastThreeTils";
 import React from "react";
 
 const ServicesSection = () => {
@@ -22,9 +23,7 @@ const ServicesSection = () => {
           <ChipsetReplacement />
           <DataRecovery />
           <HardDiskReplacement />
-          <div className="bg-red-500 h-[415px]  rounded-2xl col-span-12 md:col-span-6 lg:col-span-4"></div>
-          <div className="bg-red-500 h-[415px]  rounded-2xl col-span-12 md:col-span-6 lg:col-span-4"></div>
-          <div className="bg-red-500 h-[415px]  rounded-2xl col-span-12 md:col-span-12 lg:col-span-4"></div>
+          <LastThreeTils />
         </div>
       </Container>
     </div>

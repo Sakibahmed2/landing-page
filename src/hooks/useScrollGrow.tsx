@@ -1,7 +1,11 @@
 import { useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
-const useScrollGrow = ({ x = 0 }) => {
+type TScrollProps = {
+  x?: number;
+};
+
+const useScrollGrow = ({ x }: TScrollProps) => {
   const componentRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: componentRef,
@@ -9,7 +13,7 @@ const useScrollGrow = ({ x = 0 }) => {
   });
 
   const scaleValue = useTransform(scrollYProgress, [0, 1], [0.9, 1]);
-  const opacityValue = useTransform(scrollYProgress, [0, 1], [0.2, 1]);
+  const opacityValue = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
   const xValue = useTransform(scrollYProgress, [0, 1], [x, 1]);
 
   const style = {
