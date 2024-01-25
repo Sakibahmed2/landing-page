@@ -5,7 +5,7 @@ import AddService from "@/pages/Admin/AddService";
 import Dashboard from "@/pages/Admin/Dashboard";
 import ServiceList from "@/pages/Admin/ServiceList";
 import Home from "@/pages/Home";
-import { createBrowserRouter } from "react-router-dom";
+import { Navigate, createBrowserRouter } from "react-router-dom";
 
 const routes = createBrowserRouter([
   {
@@ -28,6 +28,10 @@ const routes = createBrowserRouter([
     children: [
       {
         index: true,
+        element: <Navigate to="/admin/dashboard" />,
+      },
+      {
+        path: "dashboard",
         element: <Dashboard />,
       },
       {
