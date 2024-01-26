@@ -4,7 +4,7 @@ import React from "react";
 
 const ServiceList = () => {
   const { data, isLoading } = useQuery({
-    queryKey: [""],
+    queryKey: ["services"],
     queryFn: getServices,
   });
 
