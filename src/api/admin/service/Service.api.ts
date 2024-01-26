@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const getServices = async () => {
-  return axios.get("https://irepair-backend-rho.vercel.app/api/v1/serdfdvices");
+  return axios.get("https://irepair-backend-rho.vercel.app/api/v1/services");
 };
 
 // export const getServices = async () => {
